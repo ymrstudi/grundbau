@@ -1,4 +1,4 @@
-\documentclass[11pt,fleqn,halfparskip]{article}
+\documentclass[11pt,fleqn,a4paper]{article}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
@@ -8,15 +8,95 @@
 \usepackage{amssymb}
 \usepackage[final]{pdfpages}
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+
 
 \title{Grundbau Beleg}
 \author{Paul Debus \and Matrikelnummer: 110113}
 
 \begin{document}
+\pagenumbering{roman}
 \maketitle
+\includepdf[pages=1,pagecommand=\section{Aufgabenstellung}, scale=0.9]{aufgabe.pdf}
+\includepdf[pages=2-,pagecommand={},scale=0.9]{aufgabe.pdf}
 \tableofcontents
 \newpage
-\pagenumbering{roman}
-\section{Aufgabenstellung}
+\pagenumbering{arabic}
+\section{Aufgabe 1}
+\subsubsection*{Festlegung der eigenen Parameter aus Verteiler}
+Matrikelnummer 110113
+\begin{itemize}
+\item Stützmauerhöhe 3,3m
+\item Hangneigung $11^\circ$
+\item Bodenart SW
+\item $\varphi $' = $35^\circ$
+\item c' = 0 [kN/m²]
+\item $\gamma$ = 20 [kN/m³]
+\item $E_s$ = 50 [MN/m²]
+\item $l_c/l_o$ = 0.5
+\end{itemize}
+\subsection{Erläuterungsbericht}
+\subsubsection*{Charakteristik der Aufgabe und des Standortes}
+Es soll eine 30m lange Stützmauer entlang einer Straße erneuert werden. Dazu soll die vorhandene Natursteinmauer durch ein neues Bauwerk ersetzt werden. Der anstehende Boden ist ein abgestufter Kies, der von 0.2m Mutterboden bedeckt wird. Der Hang wird als Wiese genutzt und es mit Sickerwasser zu rechnen. \\
+Im folgenden werden drei Varianten für das neue Bauwerkt beschrieben, von denen dann eine ausgewählt und bemessen wird.
+\subsubsection*{Variante 1: Spundwand} 
+Eine Spundwand ist ein in den Boden gerammtes Stahlprofil, welches als wie ein Kragträger wirkt. Durch den guten Verbund der einzelnen Elemente, sind Spundwände praktisch wasserdicht. Ab einer gewissen Höhe verankert man Spundwände horizontal in den Boden um Verformungen und Momente in der Baugrubensohle zu reduzieren und damit die Einbindelänge. Spundwände werden vor allem für den Baugrubenverbau eingesetzt, da sie sehr schnell zu montieren sind und nach dem Abbau wieder verwendet werden können. Für dauerhafte Bauten werden Spundwände besonders im Hafenbau eingesetzt, aber auch im Straßenbau zur Hangsicherung. \\
+Der Aufwand bei der Bauausführung ist sehr gering, da die Spundwand einfach hinter der schon bestehenden Wand eingerammt werden kann und man diese danach abtragen kann. Bei anderen Befestigungen wie z.B. einer Winkelmauer ist eine Baugrube erforderlich, die allein schon eine Spundwand zur Absicherung braucht. Der Montageaufwand ist daher im Vergleich zu anderen Verfahren sehr gering. \\
+Da Spundwände aus Stahl hergestellt werden, muss sich auch um Korrosionsschutz Gedanken gemacht werden. Gerade auf der Seite des anstehenden Bodens ist dieser nur sehr schwer zu leisten, sodass eine Spundwand nicht verlässlich vor Korrosion geschützt werden kann. Da ein Dauerbauwerk auf mehrere Jahrzehnte ausgelegt wird (wenn nicht sogar noch länger), wird es irgendwann zu Einschränkungen der Tragfähigkeit einer Spundwand kommen. \\
+Für kurzzeitige Verbaue sind Spundwände sehr gut geeignet, bei Dauerbauwerken kann man Probleme mit der Haltbarkeit bekommen.
+\newpage
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Spundwandschnitt.png}
+\caption{Schnitt durch ein Spundwandprofil Larsen 603 \cite[2.1.1 S.10]{spund}}
+\end{figure}
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{Spundwandlangs.png}
+\caption{Längsschnitt durch eine Spundwand \cite[1.6 S.10]{spund}}
+\end{figure}
+\newpage
+\subsubsection*{Variante 2: Gabione}
+Gabionen sind mit Steinen gefüllte Drahtkörbe, die zu einer Mauer aufgebaut werden und wie eine Gewichtsmauer wirken. Bei der Füllung ist auf die Auswahl von frost- und Witterungsbeständigem Material zu achten. Die Füllung kann geschüttet werden (wirtschaftlich) oder per Hand gestapelt werden (ästhetisch). Gabionen werden in der Landschaftsarchitektur, im Wasserbau sowie im Straßen- und Wegebau zum Aufbau von Wällen, zur Errichtung von Sicht- oder Lärmschutzanlagen, zur Böschungsbefestigung und als Stützmauer (etwa als Alternative zu konventionellen Trockenmauern in Weinbergen) eingesetzt. \\
+Ein Vorteil der Gabionen gegenüber z.B. einer Spundwand ist die gute Anpassungsfähigkeit dem Gelände gegenüber. Außerdem sind sie durch geringen technologischen Aufwand und günstige Baustoffe relativ wirtschaftlich herzustellen. Außerdem sind sie ökologisch nachhaltiger als andere Befestigungen, da sie sich leicht begrünen lassen und so Kleintieren einen Lebensraum bieten können. \\
+Früher wurden Gabionen so geplant, dass sie von der Vegetation durchwachsen werden, während gleichzeitig der Draht der Körbe verrostet, sodass wie eine natürliche Befestigung wirkt. Heute werden die Körbe aus verzinktem Stahl gefehrtigt, sodass sie auch mehrere Jahrzente stabil bleiben. Bei grober Fülung der Körbe sind Gabionenwände auch wasserdurchlässig und erhalten so den natürlichen Wasserfluss.\\
+Die Herstellung der Gabionenwand ist nicht aufwändig und geht relativ schnell, je nach Qualität des vorhandenen Fundamentes der bisherigen Mauer, sind Betonarbeiten nötig, die den Umfang der Projektes vergrößern.
+\begin{figure}[h!]
+\includegraphics[scale=0.8]{Gabionenwand.png}
+\caption{Längsschnitt durch eine Gabionenwand \cite{gabio}}
+\end{figure}
+\begin{figure}[h!]
+\includegraphics[scale=0.2]{gabione.jpg}
+\caption{Ein Gabionenkorb \cite{gabio2}}
+\end{figure}
+\newpage
+\subsubsection*{Variante 3: Gewichtsmauer}
+Gewichtsmauern sind massive, meist aus unbewehrtem Beton hergestellte Hangsicherungsbauwerke. Sie gleichen in Bau- und Wirkungsweise den Gewichtsstaumauern aus dem Wasserbau. \\
+Gewichtsmauern lassen sich sehr gut an das Gelände anpassen und können auch gut in großen Maßen hergestellt werden. Allerdings brauchen sie relativ viel Material und haben einen relativ langen Herstellungsprozess. Außerdem muss eine Baugrube ausgehoben werden. \\
+In der Pflege im Bestand des Bauwerkes sind Betonmauern generell sehr einfach, da Beton ein wetterfestes Material ist.
+\begin{figure}[h!]
+\includegraphics[scale=0.8]{gewichtsmauer.png}
+\caption{Längsschnitt durch eine Gewichtsmauer \cite[11.63]{gewichtsmauer}}
+\end{figure}
+\subsubsection*{Auswahl einer der Varianten}
+Jede der drei vorgestellten Varianten hat besondere Vorzüge und ist für bestimmte Szenarien besser geeignet als die anderen. In diesem Fall wähle ich die \textbf{Gabione}. Diese Wahl treffe ich besonders aufgrund des Sickerwassers, das an diesem Hang eintrifft. Bei anderen, wasserundurchlässigen Bauwerken muss sich um die Wasserhaltung gesondert Gedanken gemacht werden und es müssen zusätzliche Entwässerungsanlagen geplant werden. Dies alles ist bei Gabionen nicht der Fall. Weitere Gründe für die Gabione sind eine Tragweise vergleichbar mit der einer Gewichtsmauer, verbunden mit einer Montagegeschwindigkeit, die eher einer Spundwand entspricht. Außerdem kann man dieses Bauwerk sehr gut an die Form des Hanges anpassen. \\
+In meiner Erfahrung sind Gabionen sehr häufig anzutreffende Bauwerke für diesen Zweck. Auch optisch passt eine Gabione besser in die Landschaft einer Wiese, als eine doch sehr massive Stahl- oder Betonkonstruktion.
+\subsubsection*{}
+\newpage
+\subsection{Bemessung}
+\subsection{Konstruktionszeichnungen}
+\subsection{Nebenbetrachtungen}
+
+\newpage
+\listoffigures
+\newpage
+\section{Literaturliste}
+\begin{thebibliography}{9}
+\bibitem[Spundwandhandbuch]{spund} 
+http://www.thyssenkrupp-bautechnik.de/fileadmin/Leistungen/01 \_Spundwandprofile/\_media/spundwandhandbuch.pdf
+\bibitem[Wikipedia - Gabione]{gabio} http://upload.wikimedia.org/wikipedia/de/3/3b/Gabionenwand.png
+\bibitem[Schneider]{gewichtsmauer} Schneider Bautabellen, 20. Auflage
+\bibitem[Seib Natursteine GmbH]{gabio2} http://www.seib-natursteine.com/gfx\_content/produktbilder/14030100.jpg
+\end{thebibliography}
 
 \end{document}
