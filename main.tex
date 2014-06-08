@@ -80,10 +80,61 @@ In der Pflege im Bestand des Bauwerkes sind Betonmauern generell sehr einfach, d
 \end{figure}
 \subsubsection*{Auswahl einer der Varianten}
 Jede der drei vorgestellten Varianten hat besondere Vorzüge und ist für bestimmte Szenarien besser geeignet als die anderen. In diesem Fall wähle ich die \textbf{Gabione}. Diese Wahl treffe ich besonders aufgrund des Sickerwassers, das an diesem Hang eintrifft. Bei anderen, wasserundurchlässigen Bauwerken muss sich um die Wasserhaltung gesondert Gedanken gemacht werden und es müssen zusätzliche Entwässerungsanlagen geplant werden. Dies alles ist bei Gabionen nicht der Fall. Weitere Gründe für die Gabione sind eine Tragweise vergleichbar mit der einer Gewichtsmauer, verbunden mit einer Montagegeschwindigkeit, die eher einer Spundwand entspricht. Außerdem kann man dieses Bauwerk sehr gut an die Form des Hanges anpassen. \\
+In diesem Fall kommt noch dazu, dass sowohl das Material der vorhandenen Stützmauer als auch der anstehende Boden verwendet werden kann, die Körbe zu befüllen. \\
 In meiner Erfahrung sind Gabionen sehr häufig anzutreffende Bauwerke für diesen Zweck. Auch optisch passt eine Gabione besser in die Landschaft einer Wiese, als eine doch sehr massive Stahl- oder Betonkonstruktion.
-\subsubsection*{}
+\subsubsection*{Konstruktiv-technologische Festlegungen}
+Aus technologischen Gründen werden Körbe von 1m Höhe, 1m Tiefe und 2m Breite verbaut. Um die nötige Höhe von 3.3m zu überwinden, werden 4 Körbe übereinander gestapelt. Daraus ergibt sich eine Einbindetiefe der Körbe von 70cm. Die Körbe werden wie eine Treppe mit jeweils 20cm Versatz aufeinander gestapelt. Insegesamt ergibt das einen Versatz von 60cm, also einen Wandneigungswinkel von -8.5$^\circ$.\\
+Um eine monolithische Wirkung 
+Da die Körbe erst vor Ort auf der Baustelle gefüllt werden, wir das vorhandene Material verwendet. Außerdem kann das abgetragene Material der alten Mauer verwendet werden. Allerdings wird die Wichte etwas reduziert angesetzt, da die feinen Anteile aus den Körben heraus rieseln. Ich setze eine Wichte von $15kN/m^3$ an. 
 \newpage
+\subsubsection*{Bauablauf}
+\begin{itemize}
+\item Absperrung der Straße
+\item Abtragen des Mutterbodens oberhalb
+\item Einrammen einer Spundwand als Baugrubensicherung
+\item Rückbau der vorhandenen Wand und Abtragen des anstehenden Bodens
+\item Ausheben der Baugrube 
+\item Aufstellen der Gabionen und lagenweises Hinterfüllen und verdichten des Bodens
+\item Nach jeder neuen Lage die Blöcke mit der Lage darunter monolithisch verbinden
+\item Bau eines Entwässerungsgrabens entlang der Straße am Fuße der Stützmauer
+\item Entfernen der Spundwand und der Absperrung
+\item Wiederherstellung der Wiese
+\end{itemize}
 \subsection{Bemessung}
+\subsubsection{Lastannahmen und Lastfälle}
+Die einwirkenden Kräfte aus dem Boden ergeben sich aus der Aufgabenstellung. Dazu wird auf der Wiese eine Last von $20kn/m^2$ angesetzt, davon $10kN/m^2$ als ständige Last und $10kN/m^2$ als Verkehrslast.
+\subsubsection*{Lastfall aktiver Erddruck}
+Annahme: $\delta_a = |\alpha| = 8.5^\circ \rightarrow E_{av} = 0 $ \cite[S.149]{wsp}
+\begin{equation*}
+E_a = E_{ah} =  1/2 \gamma ' h^2 K_{ag} + p h K_{ap} - c h K_{ac}
+\end{equation*}
+Der Boden hat keine Kohäsion. Deshalb:
+\begin{equation*}
+E_a = E_{ah} =  1/2 \gamma ' h^2 K_{ag} + p h K_{ap}
+\end{equation*}
+\begin{equation*}
+K_{agh} = \left[\frac{\cos(\varphi - \alpha)}{\cos \alpha \left(1+ \sqrt{\frac{\sin(\varphi + \delta_a)*\sin(\varphi - \beta)}{\cos(\alpha - \beta) * \cos(\alpha + \delta_a)}}\right)}\right]^2
+=
+\left[\frac{\cos(35^\circ - (-8.5^\circ))}{\cos (-8.5^\circ) \left(1+ \sqrt{\frac{\sin(35^\circ + 8.5^\circ)*\sin(35^\circ - 11^\circ)}{\cos((-8.5^\circ) - 11^\circ) * \cos((-8.5^\circ) + 8.5^\circ)}}\right)}\right]^2 
+\end{equation*}
+\begin{equation*}
+K_{agh} = 0.225354
+\end{equation*}
+\begin{equation*}
+K_{aph} = K_{agh}\frac{\cos\alpha \cos\beta}{\cos(\alpha - \beta)} = 0.231861
+\end{equation*}
+\begin{equation*}
+E_a = E_{ah} =  1/2 \gamma ' h^2 K_{ag} + p h K_{ap} = 32.16kN/m
+\end{equation*}
+\begin{equation*}
+y_{E_a} = \frac{2e_{ah1} + e_{ah2}}{e_{ah1} + e_{ah2}} \frac{h}{3} = 1.473m
+\end{equation*}
+
+\begin{figure}
+\vspace{10cm}
+\caption{Erddruckverteilung}
+\end{figure}
+\newpage 
 \subsection{Konstruktionszeichnungen}
 \subsection{Nebenbetrachtungen}
 
@@ -97,6 +148,7 @@ http://www.thyssenkrupp-bautechnik.de/fileadmin/Leistungen/01 \_Spundwandprofile
 \bibitem[Wikipedia - Gabione]{gabio} http://upload.wikimedia.org/wikipedia/de/3/3b/Gabionenwand.png
 \bibitem[Schneider]{gewichtsmauer} Schneider Bautabellen, 20. Auflage
 \bibitem[Seib Natursteine GmbH]{gabio2} http://www.seib-natursteine.com/gfx\_content/produktbilder/14030100.jpg
+\bibitem[WSP]{wsp} Wissensspeicher Geotechnik - Delef Rütz, Karl Josef Witt - 18.Auflage - Weimar 2011
 \end{thebibliography}
 
 \end{document}
