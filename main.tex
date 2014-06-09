@@ -83,9 +83,9 @@ Jede der drei vorgestellten Varianten hat besondere Vorzüge und ist für bestim
 In diesem Fall kommt noch dazu, dass sowohl das Material der vorhandenen Stützmauer als auch der anstehende Boden verwendet werden kann, die Körbe zu befüllen. \\
 In meiner Erfahrung sind Gabionen sehr häufig anzutreffende Bauwerke für diesen Zweck. Auch optisch passt eine Gabione besser in die Landschaft einer Wiese, als eine doch sehr massive Stahl- oder Betonkonstruktion.
 \subsubsection*{Konstruktiv-technologische Festlegungen}
-Aus technologischen Gründen werden Körbe von 1m Höhe, 1m Tiefe und 2m Breite verbaut. Um die nötige Höhe von 3.3m zu überwinden, werden 4 Körbe übereinander gestapelt. Daraus ergibt sich eine Einbindetiefe der Körbe von 70cm. Die Körbe werden wie eine Treppe mit jeweils 20cm Versatz aufeinander gestapelt. Insegesamt ergibt das einen Versatz von 60cm, also einen Wandneigungswinkel von -8.5$^\circ$.\\
+Aus technologischen Gründen werden Körbe von 1m Höhe, 2m Tiefe und 3m Breite verbaut. Um die nötige Höhe von 3.3m zu überwinden, werden 4 Körbe übereinander gestapelt. Daraus ergibt sich eine Einbindetiefe der Körbe von 70cm. Die Körbe werden wie eine Treppe mit jeweils 30cm Versatz aufeinander gestapelt. Insegesamt ergibt das einen Versatz von 90cm, also einen Wandneigungswinkel von -12.7$^\circ$.\\
 Um eine monolithische Wirkung 
-Da die Körbe erst vor Ort auf der Baustelle gefüllt werden, wir das vorhandene Material verwendet. Außerdem kann das abgetragene Material der alten Mauer verwendet werden. Allerdings wird die Wichte etwas reduziert angesetzt, da die feinen Anteile aus den Körben heraus rieseln. Ich setze eine Wichte von $15kN/m^3$ an. 
+Da die Körbe erst vor Ort auf der Baustelle gefüllt werden, wir das vorhandene Material verwendet. Außerdem kann das abgetragene Material der alten Mauer verwendet werden. Allerdings wird die Wichte etwas reduziert angesetzt, da die feinen Anteile aus den Körben heraus rieseln. Ich setze eine Wichte von $16kN/m^3$ an. 
 \newpage
 \subsubsection*{Bauablauf}
 \begin{itemize}
@@ -103,8 +103,8 @@ Da die Körbe erst vor Ort auf der Baustelle gefüllt werden, wir das vorhandene
 \subsection{Bemessung}
 \subsubsection{Lastannahmen und Lastfälle}
 Die einwirkenden Kräfte aus dem Boden ergeben sich aus der Aufgabenstellung. Dazu wird auf der Wiese eine Last von $20kn/m^2$ angesetzt, davon $10kN/m^2$ als ständige Last und $10kN/m^2$ als Verkehrslast.
-\subsubsection*{Lastfall aktiver Erddruck}
-Annahme: $\delta_a = |\alpha| = 8.5^\circ \rightarrow E_{av} = 0 $ \cite[S.149]{wsp}
+\subsubsection*{Lastfall aktiver Erddruck und Auflast}
+Annahme: $\delta_a = |\alpha| = 12.7^\circ \rightarrow E_{av} = 0 $ \cite[S.149]{wsp}
 \begin{equation*}
 E_a = E_{ah} =  1/2 \gamma ' h^2 K_{ag} + p h K_{ap} - c h K_{ac}
 \end{equation*}
@@ -115,26 +115,54 @@ E_a = E_{ah} =  1/2 \gamma ' h^2 K_{ag} + p h K_{ap}
 \begin{equation*}
 K_{agh} = \left[\frac{\cos(\varphi - \alpha)}{\cos \alpha \left(1+ \sqrt{\frac{\sin(\varphi + \delta_a)*\sin(\varphi - \beta)}{\cos(\alpha - \beta) * \cos(\alpha + \delta_a)}}\right)}\right]^2
 =
-\left[\frac{\cos(35^\circ - (-8.5^\circ))}{\cos (-8.5^\circ) \left(1+ \sqrt{\frac{\sin(35^\circ + 8.5^\circ)*\sin(35^\circ - 11^\circ)}{\cos((-8.5^\circ) - 11^\circ) * \cos((-8.5^\circ) + 8.5^\circ)}}\right)}\right]^2 
+\left[\frac{\cos(35^\circ - (-12.7^\circ))}{\cos (-12.7^\circ) \left(1+ \sqrt{\frac{\sin(35^\circ + 12.7^\circ)*\sin(35^\circ - 11^\circ)}{\cos((-12.7^\circ) - 11^\circ) * \cos((-12.7^\circ) + 12.7^\circ)}}\right)}\right]^2 
 \end{equation*}
 \begin{equation*}
-K_{agh} = 0.225354
+K_{agh} = 0.0.1925
 \end{equation*}
 \begin{equation*}
-K_{aph} = K_{agh}\frac{\cos\alpha \cos\beta}{\cos(\alpha - \beta)} = 0.231861
+K_{aph} = K_{agh}\frac{\cos\alpha \cos\beta}{\cos(\alpha - \beta)} = 0.2013
 \end{equation*}
 \begin{equation*}
-E_a = E_{ah} =  1/2 \gamma ' h^2 K_{ag} + p h K_{ap} = 32.16kN/m
+E_a = E_{ah} =  1/2 \gamma ' h^2 K_{ag} + p h K_{ap} = 27.6kN/m
 \end{equation*}
 \begin{equation*}
-y_{E_a} = \frac{2e_{ah1} + e_{ah2}}{e_{ah1} + e_{ah2}} \frac{h}{3} = 1.473m
+y_{E_a} = \frac{2e_{ah1} + e_{ah2}}{e_{ah1} + e_{ah2}} \frac{h}{3} = 1.512m
 \end{equation*}
-
+\newpage 
 \begin{figure}
 \vspace{10cm}
-\caption{Erddruckverteilung}
+\caption[Erddruckverteilung Aufgabe 1]{Erddruckverteilung \cite{me}}
 \end{figure}
-\newpage 
+\subsubsection{Ermittlung der Einwirkungen}
+\begin{equation*}
+G_k = Tiefe_{Block} * Höhe_{Block} * Anzahl_{Blöcke} * \gamma_{Block} = 2m * 1m * 4 * 16kN/m^3 = 128kN/m
+\end{equation*}
+$\hspace{1cm} V_k = 0 $ Aus Annahme für aktiven Erddruck \\
+$\hspace{1cm} H_k = 27.6kN/m $ Aktiver Erddruck \\
+Schnittgrößen in der Sohlfuge: \\
+$\hspace{1cm} N_k = V_k + G_k = 128Kn/m $\\
+$\hspace{1cm} T_k = H_k = 27.6kN/m $ \\
+$\hspace{1cm} M_k = H_k * y_{E_a} = 27.6kN/m * 1.512m = 41.719kNm/m $ \\
+\begin{equation*}
+e = \frac{M_k}{N_k} = \frac{41.719kNm/m}{120kN/m} = 0.326m
+\end{equation*}
+\subsubsection{Nachweis Kippsicherheit GZ EQU}
+Berechnungen nach \cite[S.97]{wsp}. Das Verfahren ist anwendbar, da mindestens mitteldicht gelagerter nichtbindiger Boden vorliegt.\\ 
+Prüfen, ob die Sohldruckresultierende aus ständigen Belastungen innerhalb der ersten Kernweite liegt: \\
+Bedingung: $ e \le b/6 =0.33m$ \\
+$ 0.326m \le 0.33m \checkmark$ \\
+\newpage
+Prüfen, ob die Sohldruckresultierende aus ständigen und veränderlichen Belastungen innerhalb der zweiten Kernweite liegt:\\
+Bedingung: $e \le b/3 = 0.66m$\\
+Rechnung analog zu nur ständige Einwirkungen.\\
+$E_{a,2} = 34.24kN/m$ \\
+$M_{k,2} = 44.98kNm/m$ \\
+$e_2 = 0.351m \le 0.66m \checkmark$
+
+
+
+
 \subsection{Konstruktionszeichnungen}
 \subsection{Nebenbetrachtungen}
 
@@ -149,6 +177,7 @@ http://www.thyssenkrupp-bautechnik.de/fileadmin/Leistungen/01 \_Spundwandprofile
 \bibitem[Schneider]{gewichtsmauer} Schneider Bautabellen, 20. Auflage
 \bibitem[Seib Natursteine GmbH]{gabio2} http://www.seib-natursteine.com/gfx\_content/produktbilder/14030100.jpg
 \bibitem[WSP]{wsp} Wissensspeicher Geotechnik - Delef Rütz, Karl Josef Witt - 18.Auflage - Weimar 2011
+\bibitem[Paul Debus]{me} Paul Debus - Powered by Faber Castell
 \end{thebibliography}
 
 \end{document}
