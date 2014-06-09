@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
 \usepackage{graphicx}
+\usepackage{upgreek}
 \usepackage{floatflt}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -159,10 +160,36 @@ Rechnung analog zu nur ständige Einwirkungen.\\
 $E_{a,2} = 34.24kN/m$ \\
 $M_{k,2} = 44.98kNm/m$ \\
 $e_2 = 0.351m \le 0.66m \checkmark$
-
-
-
-
+\subsubsection{Nachweis Grundbruchsicherheit GZ GEO.2}
+Berechnung nach \cite[S.99]{wsp}. \\
+\textbf{Beanspruchungen:}\\
+$V_d = V_G*\gamma_G = 128kN/m * 1.35 = 172.8kN/m$ \\
+\\
+\textbf{Widerstände}\\
+Berechnung der geometrischen Parameter: \\
+$ a' = 1m$ Meterstreifen, da Streifenfundament \\
+$ b' = b - 2e = 2m - 2*0.326m = 1.348m$ \\
+$ \tan\delta = T/N = 0.216 $ \\
+$ \delta = 12.55^\circ \rightarrow$ Der Gleitkörper verschiebt sich in Richtung von T. 
+\\
+Bestimmung des Widerstandes (keine Kohäsion): \\
+$R_n = a'b' (\gamma_1 d N_d + \gamma_2 b' N_b)$\\
+\\
+\begin{tabular}{|l|r|r|}
+\hline
+ & \multicolumn{1}{l|}{\textbf{Gründungstiefe}} & \multicolumn{1}{l|}{\textbf{Gründungsbreite}} \\ \hline
+\textbf{Tragfähigkeit} & 33.296 & 22.614 \\ \hline
+\textbf{Form} & 1 & 1 \\ \hline
+\textbf{Lastneigung} & 0.615 & 0.483 \\ \hline
+\end{tabular}\\
+\\
+$ N_d = N_{d,0} \upnu_d i_d = 33.296 * 1 * 0.615 = 20.485$ \\
+$ N_b = N_{b,0} \upnu_b i_b = 22.614 * 1 * 0.483 = 10.913$ \\
+$ R_n = 1 * 1.348 * (20 * 0.7 * 20.485 + 20 * 1.348 * 10.913) = 783.913kN/m$\\
+$R_d = R_n/\gamma_{R,v} = 783.913 / 1.4 = 559.938kN/m$ \\
+\\
+$N_d = 172.8kN/m < R_d = 559.938kN/m$ $\checkmark$ \\
+Grundbruchsicherheitsnachweis erfüllt!
 \subsection{Konstruktionszeichnungen}
 \subsection{Nebenbetrachtungen}
 
