@@ -299,6 +299,54 @@ Berechnung nach \cite[S.137ff]{wsp}
 \begin{itemize}
 \item Erddruck infolge Verkehrslasten benachbarter Bauwerke
 \end{itemize}
+\subsubsection{Lastfälle}
+\textbf{Ständige Bemessungssituation}\\
+Nur ständige Einwirkungen.\\
+\begin{figure}[h]
+\vspace{10cm}
+\caption[Lastfall 1 - Aufgabe 2]{Lastfall ständige Einwirkungen \cite{me}}
+\end{figure}
+\newpage
+\textbf{Vorübergehende Bemessungssituation}\\
+Ständige und veränderliche Einwirkungen\\
+\begin{figure}[h]
+\vspace{8cm}
+\caption[Lastfall 2 - Aufgabe 2]{Lastfall ständige + veränderliche Einwirkungen \cite{me}}
+\end{figure}
+\subsubsection{Lastflächen}
+Die Lastflächen aus belastendem und stützendem Erddruck. Der belastende Erddruck wird bis zur Baugrundsohle umgelagert. 
+\begin{figure}[h]
+\vspace{8cm}
+\caption[Lastflächen Aufgabe 2]{Darstellung der Lastflächen \cite{me}}
+\end{figure}
+\subsubsection{Berechnung des Erddrucks}
+\textbf{Ermittlung der aktiven Erddruckbeiwerte:}\\
+Da $\alpha = \beta = 0$ und $\delta_p = 2/3\varphi'$, können die Werte aus der Tabelle \cite[S.83]{wsp} abgelesen werden.
+\begin{description}
+\item[Eigenlast] $K_{agh} = 0.251$
+\item[Auflast] $K_{aph} = K_{agh} = 0.251$
+\end{description}
+\textbf{Ermittlung der passiven Erddruckbeiwerte}
+Da $\alpha = \beta = 0$ und $\delta_p = 2/3\varphi'$, können die Werte aus der Tabelle \cite[S.89]{wsp} abgelesen werden.
+\begin{description}
+\item[Eigenlast] $K_{agh} = 6,00$
+\end{description}
+\begin{table}[htbp]
+\caption{Erdruckordinaten für den aktiven Erddruck aus Eigengewicht}
+
+\begin{tabular}{|r|c|r|r|r|r|r|}
+\hline
+Kote [m] & Schicht & $\gamma / \gamma'$ & $\sigma_z = \sum\gamma_ih_i$ & $\phi'$ & $K_{agh}$ & $e_{agh} = e_{ah} = K_{agh}\sigma_z$  \\ \hline
+0 & SW & 18 & 0 & 32 & 0,251 & 0   \\ \cline{ 1- 1}\cline{ 3- 7}
+-4,9 &  & 18 & 88.2 & 32 & 0,251 & 22,1382   \\ \cline{ 1- 1}\cline{ 3- 7}
+ -4,9-t &  & 10,5 & 88.2 + 10.5t & 32 & 0,251 & 22.1382 + 2.54t \\ \hline
+\end{tabular}
+\label{}
+\end{table}
+
+
+
+
 
 \newpage
 \listoffigures
