@@ -1,4 +1,4 @@
-\documentclass[11pt,fleqn,a4paper]{article}
+\documentclass[11pt,fleqn,a4paper,halfparskip]{article}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
@@ -104,8 +104,8 @@ Da die Körbe erst vor Ort auf der Baustelle gefüllt werden, wir das vorhandene
 \subsection{Bemessung}
 \subsubsection{Lastannahmen und Lastfälle}
 Die einwirkenden Kräfte aus dem Boden ergeben sich aus der Aufgabenstellung. Dazu wird auf der Wiese eine Last von $20kn/m^2$ angesetzt, davon $10kN/m^2$ als ständige Last und $10kN/m^2$ als Verkehrslast.
-\subsubsection*{Lastfall aktiver Erddruck und Auflast}
-Annahme: $\delta_a = |\alpha| = 12.7^\circ \rightarrow E_{av} = 0 $ \cite[S.149]{wsp}
+\subsubsection*{Lastfall aktiver Erddruck und ständige Auflast}
+Annahme: $\delta_a = |\alpha| = 12.7^\circ \rightarrow E_{av} = 0 $ \cite[S.149]{wsp} \\
 \begin{equation*}
 E_a = E_{ah} =  1/2 \gamma ' h^2 K_{ag} + p h K_{ap} - c h K_{ac}
 \end{equation*}
@@ -135,6 +135,8 @@ y_{E_a} = \frac{2e_{ah1} + e_{ah2}}{e_{ah1} + e_{ah2}} \frac{h}{3} = 1.512m
 \vspace{10cm}
 \caption[Erddruckverteilung Aufgabe 1]{Erddruckverteilung \cite{me}}
 \end{figure}
+\subsubsection*{Lastfall Verkehrslast}
+
 \subsubsection{Ermittlung der Einwirkungen}
 \begin{equation*}
 G_k = Tiefe_{Block} * Höhe_{Block} * Anzahl_{Blöcke} * \gamma_{Block} = 2m * 1m * 4 * 16kN/m^3 = 128kN/m
@@ -186,10 +188,29 @@ $R_n = a'b' (\gamma_1 d N_d + \gamma_2 b' N_b)$\\
 $ N_d = N_{d,0} \upnu_d i_d = 33.296 * 1 * 0.615 = 20.485$ \\
 $ N_b = N_{b,0} \upnu_b i_b = 22.614 * 1 * 0.483 = 10.913$ \\
 $ R_n = 1 * 1.348 * (20 * 0.7 * 20.485 + 20 * 1.348 * 10.913) = 783.913kN/m$\\
-$R_d = R_n/\gamma_{R,v} = 783.913 / 1.4 = 559.938kN/m$ \\
+$R_d = R_n/\gamma_{R,v} = 783.913  / 1.4 = 559.938kN/m$ \\
 \\
 $N_d = 172.8kN/m < R_d = 559.938kN/m$ $\checkmark$ \\
 Grundbruchsicherheitsnachweis erfüllt!
+\subsubsection{Nachweis Gleitsicherheit GZ GEO-2}
+Berechnung nach \cite[S.98]{wsp}. Der Erdwiderstand auf der anderen Seite wird nicht angesetzt.\\
+\textbf{Beanspruchungen:}\\
+$H_d = H_{G,k}\gamma_G + H_{Q,k}\gamma_Q$ \\
+$H_{G,k} = E_{agh} = 27.6kN/m $\\
+$H_{Q,k} = E_{aph} = phK_{ap} = 10kN/m^2*3.3m*0.2013 = 6.643kN/m $\\
+$H_d = 27.6kN/m * 1.35 + 6.643kN/m * 1.5 = 47.2245kN/m$\\
+\newpage
+\textbf{Widerstände:}\\
+$R_d = R_k/\gamma_{R,h} = R_k/1.1$ \\
+$R_k = V'_k \tan\delta_k$\\
+$V'_k = G_k + E_{a,v} = G_k + 0 = 128kN/m$\\
+$\delta_k = \varphi$ (max $35^\circ$) = $35^\circ$\\
+$R_k = 128kN/m * \tan(35^\circ) = 89.63kN/m$ \\
+$R_d = R_k/1.1 = 89.63kN/m/1.1 = 81.48kN/m$ \\
+\\
+$H_d = 47.2245kN/m < R_d = 81.48kN/m \checkmark$ \\
+Gleitsicherheitsnachweis erfüllt!
+
 \subsection{Konstruktionszeichnungen}
 \subsection{Nebenbetrachtungen}
 
