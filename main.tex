@@ -211,6 +211,45 @@ $R_d = R_k/1.1 = 89.63kN/m/1.1 = 81.48kN/m$ \\
 $H_d = 47.2245kN/m < R_d = 81.48kN/m \checkmark$ \\
 Gleitsicherheitsnachweis erfüllt!
 
+\subsubsection{Nachweis der Setzungen}
+Berechnung nach \cite[S.68]{wsp}. Bei einem Streifenfundament keine Verdrehung in der langen Richtung, da keine Ausmitte der Last. \\
+Annahme: a = 10b und z = 2b\\
+Gesamtsetzung: $ s = s_m \pm s_x$ \\
+Setzungsbeiwerte und Verkantungsbeiwerte:\\
+Auslesen aus Tabelle \cite[s.69]{wsp} für f(10;2):\\
+\begin{itemize}
+\item $f = 0.9655$
+\item $f_x = 0.0108$
+\item $f_y = 0.4482$ nicht benötigt
+\end{itemize}
+Mittlere Setzung aus zentrischer Last:
+\begin{equation*}
+s_m = \frac{\sigma_1b}{E_m}f
+\end{equation*}
+$\hspace{1cm} E_m = E_s/\kappa = \frac{50}{2/3} = 75MN/m^2$, $\kappa = 2/3$ für Sand und Schluff
+\begin{equation*}
+\sigma_1 = \frac{V}{ab} = \frac{128}{2*20} = 3.2kN/m^2
+\end{equation*}
+$\hspace{1cm} s_m = \frac{3.2kN/m^2*2m}{75000kN/m^2}0.9655 = 0.000082m = 0.082mm $ \\
+\\
+Verdrehung durch ausmittige Last:\\
+\begin{equation*}
+s_x = \tan\alpha_y * \frac{a}{2}
+\end{equation*}
+\begin{equation*}
+\tan\alpha_y = \frac{M_y}{b^3E_m}f_x
+\end{equation*}
+$\hspace{1cm} M_y = -Ve_x = 128kN/m * 0.326m = -41.73kNm/m $
+\begin{equation*}
+\tan\alpha_y = \frac{-41.73kNm/m}{(2m)^3*75000kN/m^2} 0.0108 = -7.5114*10^{-7}m
+\end{equation*}
+$\hspace{1cm} s_x = \tan\alpha_y * a/2 = -7.5114*10^{-7} * 20 / 2 = -7.5114*10^{-6}m = -0.0075114mm $
+\\
+\textbf{Gesamtsetzung:}\\
+Die Gesamtsetzungen sind weit weniger als 1mm, also sehr gering und damit nicht relevant.
+
+
+
 \subsection{Konstruktionszeichnungen}
 \subsection{Nebenbetrachtungen}
 
