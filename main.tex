@@ -371,14 +371,80 @@ E_{ph}^r \\
 E_{ph}^{durchg}
 \end{pmatrix}
 \end{equation*}
-
+\subsubsection*{Passive Erddruckkräfte ohne Überschneidung}
+Formeln: Siehe \cite[S.93]{wsp}
+\begin{itemize}
+\item Gewählte Breite des Trägers l = b = 0.3m
+\item a = 2m
+\item $h = t_0 \rightarrow \frac{l}{h} < 0.3 $
+\item keine Kohäsion und keine Auflast
+\end{itemize}
+\newpage
+\begin{itemize}
+\item[] $ E^r_{ph} = E^r_{pgh} = \gamma' h^2/2 K_{pgh} l^{Er}_{pg}$
+\item[] $K_{pgh} = 6$
+\item[] $l^{Er}_{pg} = 0.55(1+2\tan32)\sqrt{0.3t_0} = 1.24\sqrt{0.3t_0} $
+\item[] $E^r_{pgh} = 10.5*\frac{t_0^2}{2}*6*1.24\sqrt{0.3t_0} = 39.06t_0^2\sqrt{0.3t_0}kN/Träger$
+\end{itemize}
+\subsubsection*{Passive Erddruckkräfte mit Überschneidung}
+\begin{itemize}
+\item[] Formeln siehe \cite[S.93]{wsp}
+\item[] $E_{ph}^{durchg} = E_p^|(a-l)+E_p^{||}l $
+\item[] $\delta_p = 0^\circ \rightarrow K^|_{pgh} = 3.26 $
+\item[] $\delta_p = -2/3\varphi' \rightarrow K^|_{pgh} = 5.8 $
+\item[] $E_{ph}^{durchg} = \gamma' \frac{t_0^2}{2}K^|_{pgh}(a-l) + \gamma' \frac{t_0^2}{2}K^{||}_{pgh} l = 10.5 \frac{t_0^2}{2}3.26*(2-0.3) + 10.5\frac{t_0^2}{2}5.8*0.3 = 38.23t_0^2$
+\end{itemize}
+\subsubsection*{Vergleich der passiven Erddruckkräfte}
+$E^r_{pgh} =  39.06t_0^2\sqrt{0.3t_0} < E_{ph}^{durchg}  = 38.23t_0^2$
+\subsubsection*{Gewählte passive Erddruckkraft vor Träger}
+$E_{ph.Träger} = E^r_{pgh} =  39.06t_0^2\sqrt{0.3t_0}$
+\newpage
+\subsubsection{Erddruckumlagerung}
+Der Anker wird 1m unterhalb der Geländeoberkante eingebracht. Dazu ergibt sich $h_k = 0.204h$. Deshalb ergibt sich aus \cite[S.137]{wsp} $e_{ho,k} = 2e_{hu,k}$.
+\begin{itemize}
+\item[] $E_{ah_k} = (e_{ho,k} + e_{hu,k})h/2 = 3e_{hu,k}* h/2 $
+\item[] $e_{hu,k} = \frac{E_{ah,k}}{1.5h} = \frac{205kN/Träger}{1.5*4.9m} = 27.89kN/m Träger$
+\item[] $e_{ho,k} = 2 e_{hu,k} = 55.78kN/m Träger$
+\item[] $E_{ah,o} = e_{ho,k}*h/2 = 55.78*4.9/2 = 136.66kN/Träger$
+\item[] $y_o = 3.68m$
+\item[] $E_{ah,u} = e_{hu,k}*h/2 = 27.89*4.9/2 = 68.33kN/Träger$
+\item[] $y_u = 1.23m$
+\end{itemize}
+\begin{figure}[h]
+\vspace{10cm}
+\caption[Umgelagerter Erddruck Aufgabe 2]{Umgelagerter Erddruck \cite{me}}
+\end{figure}
+\newpage
+\subsubsection{Berechnung der erforderlichen Einbindetiefe $t_0$}
+Berechnung nach \cite[S.136 und 141]{wsp} über Momente um den Ankerpunkt. Nach EB14 wird der Erdwiderstand mit $\eta = 0.8$ abgemindert. Der Angriffspunkt $B_{h,k}$ unterhalb der Baugrubensohle wird bei $z' = 0.6t_0$ angesetzt\subsubsection*{Momente aus aktivem Erddruck}
+Die Einwirkungen werden nur bis BGS angesetzt.
+\begin{itemize}
+\item[] $M_{a,k} = 136.66kN/Träger*(4.9m-1m-2.68m) + 68.33kN/Träger*(4.9m-1m-1.23m) \\ = 30kNm/Träger + 182.44kNm/Träger = 212.44kNm/Träger$
+\item[] $M_{a,d} = \gamma_G M_{a,k} = 1.2*212.44kNm/Träger = 254.93kNm/Träger$
+\end{itemize}
+\subsubsection*{Momente aus passivem Erddruck}
+\begin{itemize}
+\item[] $ M_{p,k} = 0.8 * 39.06t_0^2\sqrt{0.3t_0} * (4.9m-1m+0.6t_0) = 10.27t_0^{5/2}(t_0+6.5)$
+\item[] $ M_{p,d} = \frac{M_{p,k}}{\gamma_{E_p}} = \frac{10.27t_0^{5/2}(t_0+6.5)}{1.3} = 7.9t_0^{5/2}(t_0+6.5)$
+\end{itemize}
+\subsubsection*{Berechnung der notwendigen Einbindelänge}
+Bedingung: 
+\begin{equation*}
+\sum M_d^{Anker}(t_0) = 0 = M_{a,d} - M_{p,d}
+\end{equation*}
+\begin{equation*}
+0 = 254.93kNm/Träger - 7.9t_0^{5/2}(t_0+6.5)kNm/Träger
+\end{equation*}
+$t_0 = 1.73m$ \\
+$Gewählt: 1.8m$
 
 
 
 \newpage
+\section{Abbildungsverzeichnis}
 \listoffigures
 \newpage
-\section{Literaturliste}
+\section{Literatur}
 \begin{thebibliography}{9}
 \bibitem[Spundwandhandbuch]{spund} 
 http://www.thyssenkrupp-bautechnik.de/fileadmin/Leistungen/01 \_Spundwandprofile/\_media/spundwandhandbuch.pdf
