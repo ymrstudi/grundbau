@@ -329,10 +329,10 @@ Da $\alpha = \beta = 0$ und $\delta_p = 2/3\varphi'$, können die Werte aus der 
 \textbf{Ermittlung der passiven Erddruckbeiwerte}
 Da $\alpha = \beta = 0$ und $\delta_p = 2/3\varphi'$, können die Werte aus der Tabelle \cite[S.89]{wsp} abgelesen werden.
 \begin{description}
-\item[Eigenlast] $K_{agh} = 6,00$
+\item[Eigenlast] $K_{pgh} = 6,00$
 \end{description}
 \begin{table}[htbp]
-\caption{Erdruckordinaten für den aktiven Erddruck aus Eigengewicht}
+\caption{\textbf{Erdruckordinaten für den aktiven Erddruck aus Eigengewicht}}
 
 \begin{tabular}{|r|c|r|r|r|r|r|}
 \hline
@@ -343,7 +343,34 @@ Kote [m] & Schicht & $\gamma / \gamma'$ & $\sigma_z = \sum\gamma_ih_i$ & $\phi'$
 \end{tabular}
 \label{}
 \end{table}
+\textbf{Erdruckordinate für den aktiven Erddruck aus Auflast $p_k$} \\
+\begin{equation*}
+\upvartheta_{ag} = Formel \cite[S.83]{} = 57^\circ
+\end{equation*}
+\begin{equation*}
+V = p_k * 3.3m = 33kN/m
+\end{equation*}
+\begin{equation*}
+E_{aVh1} = Formel \cite[S.85]{wsp} = 12.95kN/m
+\end{equation*}
+\textbf{Erddruckordniate für den aktiven Erddruck aus dem Fundament}
+\begin{equation*}
+E_{aVh2} = Formel \cite[S.85]{wsp} = 35.32kN/m
+\end{equation*}
+\textbf{Erddruckkraft oberhalb der Baugrubensohle: }\\
+$
+E_{ah,k,Träger} = (e_{ah,1} + e_{ah,2})/2*h*a + E_{aVh1}*a + E_{aVh2}*a = \\ (0 + 22.14kn/m^2)/2*4.9m*2m + 12.95kn/m*2m + 35.32kN/m*2m = 205kN/Träger
+$
 
+\subsubsection*{Erddruckermittlung für Passiven Erddruck}
+\cite[S.140, 93]{wsp}
+\begin{equation*}
+E_{ph, Träger} = min  
+\begin{pmatrix}
+E_{ph}^r \\ 
+E_{ph}^{durchg}
+\end{pmatrix}
+\end{equation*}
 
 
 
