@@ -469,7 +469,7 @@ Auflager A
 \end{itemize}
 \begin{figure}[h]
 \vspace{8cm}
-\caption[Querkraftverlauf Aufgabe 2]{Querkräfte \cite{me}}
+\caption[Querkraftverlauf 1 Aufgabe 2]{Querkräfte \cite{me}}
 \end{figure}
 \newpage
 \subsubsection*{Querkraftnullstelle innerhalb des Feldes}
@@ -481,6 +481,10 @@ $x_0 = 1.45 + 25.45/27.89 = 1.45 + 0.91 = 2.36m$
 \item[] $maxM_f = -55.78 * 2.45 * (1.23 + 0.91) + 162.11*2.36 - 27.89*0.91*0.91/2= 78.58kNm/Träger$
 \item[] $M_2 = 42.88*1.08 = 46.31kNm/Träger$
 \end{itemize}
+\begin{figure}[h]
+\vspace{8cm}
+\caption[Momentenverlauf 1 Aufgabe 2]{Momente \cite{me}}
+\end{figure}
 \subsubsection*{Nachweis der Einbindetiefe je Träger}
 \begin{itemize}
 \item[] $B_{Gh,d} \le \eta E_{ph,d}$
@@ -489,6 +493,26 @@ $x_0 = 1.45 + 25.45/27.89 = 1.45 + 0.91 = 2.36m$
 \item[] $\eta E_{ph,d} = 0.8* 91.93/1.3 = 57.23kN/Träger$
 \item[] $51.46 < 57.23 \checkmark$
 \end{itemize}
+\newpage
+\subsubsection{Charakteristische Auflager und Schnittgrößen - Feld}
+\begin{figure}[h]
+\vspace{8cm}
+\caption[Statisches System 2 Aufgabe 2]{Statisches System - Feld \cite{me}}
+\end{figure}
+\subsubsection*{Erddruckordinate bei 4.9m}
+$e_{ah,2} = 22.14kN/m^2$
+\subsubsection*{Erdruckordinate bei 4.9m + $t_0$}
+$e_{ah,3} = 22.14 + 2.54t_0 = 22.14 + 2.54*1.8 = 26.71kN/m^2$
+\subsubsection*{Erddruckkraft für den aktiven Erddruck je Feld}
+\begin{itemize}
+\item[] $E_{ah,o} = E_{ah,o,Träger}/a = 136.66/2 = 68.33kN/m$
+\item[] $y_{A,o} = h_o/2 - h_k = 0.23m$
+\item[] $E_{ah,u} = E_{ah,u,Feld}/a = 68.33 / 2 = 34.17kN/m$
+\item[] $y_{A,u} = h - h_U/2 -h_k = 4.9m - 1.23m - 1m = 2.67m$
+\item[] $E_{ah,BGS} = (e_{ah2} + e_{ah3})/2*t_0 = (22.14kN/m^2 + 26.17kN/m^2)/2*1.8m = 43.48kN/m$
+\item[] $y_{A,BGS} = h - h_k + t_0 - \left( \frac{t_0}{3}\frac{2e_{ah2}+e_{ah3}}{e_{ah2}+e_{ah3}} \right) = 4.83m$
+\end{itemize}
+
 
 
 
