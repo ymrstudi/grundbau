@@ -444,7 +444,7 @@ $Gewählt: 1.8m$
 \end{figure}
 $z_b = 0.6t_0 = 0.6*1.8m = 1.08m$
 \newpage
-\subsubsection*{charakteristische Auflagerkräfte und Schnittgrößen - Träger bis BGS}
+\subsubsection{Charakteristische Auflagerkräfte und Schnittgrößen - Träger bis BGS}
 Auflager B
 \begin{itemize}
 \item[] $\sum M_A = 0$
@@ -512,6 +512,73 @@ $e_{ah,3} = 22.14 + 2.54t_0 = 22.14 + 2.54*1.8 = 26.71kN/m^2$
 \item[] $E_{ah,BGS} = (e_{ah2} + e_{ah3})/2*t_0 = (22.14kN/m^2 + 26.17kN/m^2)/2*1.8m = 43.48kN/m$
 \item[] $y_{A,BGS} = h - h_k + t_0 - \left( \frac{t_0}{3}\frac{2e_{ah2}+e_{ah3}}{e_{ah2}+e_{ah3}} \right) = 4.83m$
 \end{itemize}
+\subsubsection*{Erddruckkraft für passiven Erddruck je Feld}
+\begin{itemize}
+\item[] $K_{pgh} = 7.3$ mit $\delta_p = -\varphi'$
+\item[] $e_{pgh,k} = K_{pgh} \gamma' t_0 = 7.3*10.5*1.8 = 137.97kN/m^2$
+\item[] $E_{ph,k} = e_{ph,k}*0.5*t_0 = 137.97*0.5*1.8m = 124.17kN/m$
+\end{itemize}
+\subsubsection*{Charakteristische Auflagerkräfte je Feld}
+Auflager B:
+\begin{itemize}
+\item[] $\sum M_A = 0$
+\item[] $B_{Gh,k} (h - h_k + z_B) = E_{ah,o}*y_{A,o} + E_{ah,u}*y_{A,o} + E_{ah,BGS}*y_{A,BGS}$
+\item[] $B_{Gh,k}(4.9-1+0.6*1.8) = 68.33*0.23 + 34.17 * 2.67 + 43.48*4.83$
+\item[] $B_{Gh,k} =  63.65kN/Feld$
+\end{itemize}
+Auflager A:
+\begin{itemize}
+\item[] $\sum F \uparrow = 0$
+\item[] $A_{Gh,k} = E_{ah,o} + E_{ah,u} + E_{ah,BGS} - B_{Gh,k}$
+\item[] $A_{Gh,k} = 68.33 + 34.17 + 43.48 - 63.65 = 82.33kN/Feld$
+\end{itemize}
+\subsubsection*{Nachweis des Gleichgewichts der Horizontalkräfte im Feld}
+\begin{itemize}
+\item[] $B_{Gh,k}\gamma_G \le E_{ph,k}/\gamma_{E,p}$
+\item[] $63.65*1.2 = 76.38 < 55.52 = 124.17/1.3$
+\end{itemize}
+\subsubsection{Nachweis gegen Versenken im GEO-2}
+Berechnung nach \cite[S.138]{wsp}\\
+$V_d \le R_{c,d}$\\
+Annahmen: $g_k = 0.883kN/m$, $h=0.29m$, $b=0.3m$, $h_1 = 0.208m$, $r = 0.027$, $s=0.0085$ (HEA 300 - \cite{schneider})\\
+Einwirkungen:
+\begin{itemize}
+\item[] $V_d = \sum V_{G,k}\gamma_G = (E_{av,k} + G_k + A_{v,k})1.2$
+\item[] $E_{av,k} = (E_{ah,o}+E_{ah,u})\tan(\alpha + \delta_a) = (68.33 + 34.17) \tan(0 + 2/3*32) = 40.03kN/Träger$
+\item[] $G_k = g_k(h+t_0) = 0.883(4.9+1.8) = 5.92kN/Träger$
+\item[] $A_{v,k} = A_{Gh,k}\tan\alpha = 0$
+\item[] $V_d = 1.2(40.03 + 5.92) = 55.14kN/Träger\downarrow$
+\end{itemize}
+Widerstand:
+\begin{itemize}
+\item[] $R_{b,k} = A_b*q_{b1,k} $
+\item[] $A_b = b*h = 0.3m*0.29m = 0.087m^2$
+\item[] $t_w = t_0 - 0.5m = 1.3m$
+\item[] $q_{b1,k} 600+120t_w = 600 + 120*1.3 = 756kn/m^2$
+\item[] $R_{b,k} = 756 * 0.087 = 65.77kN/Träger$
+\end{itemize}
+\newpage
+\begin{itemize}
+\item[] $R_{s,k} = A_s q_{s,k}$
+\item[] $q_{s,k} = 60kN/m^2$
+\item[] $A_s = (b + 2h_1 + 2(b-s))t_0 = (0.3 + 2*0.208 + 2(0.3-0.0085))1.8 = 2.34m^2$
+\item[] $R_{s,k} = 60*2.34 = 140.4 kn/Träger$
+\item[] $R_{c,d} = R_{b,k} / \gamma_b + R_{s,k} / \gamma_{R,e} = 65.77/1.1 + 140.4/1.3 = 167.79kN/Träger\uparrow$
+\end{itemize}
+Nachweis: $V_d = 55.14kN/Träger < 167.79kN/Träger = R_{c,d}\checkmark$
+\subsubsection{Nachweis der Vertikalkomponente des mobilisierten Erdwiderstandes nach EB3}
+$\sum V_k \ge B_{v,k}$\\
+Einwirkungen:
+\begin{itemize}
+\item[] $\sum V_k = E_{av,k} + G_k = 40.03 + 5.92 = 45.95kN/Träger \downarrow$
+\end{itemize}
+Widerstand:
+\begin{itemize}
+\item[] $B_{v,k} = B_{h,k}\tan(|\delta_{B,k}|) = 63.65\tan(|-1/2*32) = 18.25kN/Träger\uparrow$
+\end{itemize}
+$\sum V_k = 49.95kN/Träger > 18.25kN/Träger = B_{v,k}\checkmark$
+\subsubsection{Nachweis für das Trägerprofil}
+
 
 
 
@@ -529,6 +596,7 @@ http://www.thyssenkrupp-bautechnik.de/fileadmin/Leistungen/01 \_Spundwandprofile
 \bibitem[Seib Natursteine GmbH]{gabio2} http://www.seib-natursteine.com/gfx\_content/produktbilder/14030100.jpg
 \bibitem[WSP]{wsp} Wissensspeicher Geotechnik - Delef Rütz, Karl Josef Witt - 18.Auflage - Weimar 2011
 \bibitem[Paul Debus]{me} Paul Debus - Powered by Faber Castell
+\bibitem[Schneider]{schneider} Schneider Bautabellen - 19. Auflage
 \end{thebibliography}
 
 \end{document}
