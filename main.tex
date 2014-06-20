@@ -578,7 +578,40 @@ Widerstand:
 \end{itemize}
 $\sum V_k = 49.95kN/Träger > 18.25kN/Träger = B_{v,k}\checkmark$
 \subsubsection{Nachweis für das Trägerprofil}
-
+Nachweis nur auf reine Biegung. Es wird ein HEA 300 Profil gewählt.\\
+Nachweise erfüllt wenn $E_d \le R_{M,d}$\\
+Teilsicherheitsbeiwerte $\gamma_G = 1.2$ für ständige Einwirkungen und $\gamma_M = 1.1$ für Festifgkeit des Stahls.\\
+$f_{y,k} = 23.5kN/cm^2$
+\subsubsection*{Maximales Moment als Beanspruchung}
+$E_d = max M * \gamma_G= 78.58kNm/Träger*1.2 = 105.1kNm/Träger$
+\subsubsection*{Vorhandenes Widerstandsmoment}
+$R_{M,D} = W_y*f_{y,k}/\gamma_{M1} = 1260*23.5/1.1 = 269.18kNm/Träger$
+\subsubsection*{Nachweis}
+$E_d = 105.1kNm/Träger < 269.18kNm/Träger = R_{M,D}\checkmark$
+\subsubsection{Nachweis für die Holzbohlen}
+Nachweis nach \cite[S.145]{wsp}\\
+Teilsicherheitsbeiwerte $\gamma_G = 1.2$ für ständige Einwirkungen und $\gamma_M = 1.3$ für Festigkeit des Holzes\\
+Gewählte Bohlen:
+\begin{itemize}
+\item[] Material: Nadelvollholz C24
+\item[] Abmaße: 10x12cm
+\item[] $f_{m,k} = 2.4kN/cm^2$
+\item[] $k_{mod} = 0.65$ Lasteinwirkungsdauer mittel
+\end{itemize}
+\subsubsection*{Maximales Moment als Beanspruchung}
+\begin{itemize}
+\item[] $e_{ah,d,max} = e_{ah,o}/a*\gamma_G = 55.78/2*1.2 = 33.47kN/m^2$
+\item[] $e_{ah,d,Bohle} = e_{ah,d,max} * h_{bohle} = 33.47*0.12 = 4.02kN/m$
+\item[] $l_s = a - \frac{2}{5}b_0 = 2 - 0.4*0.3 = 1.88m$
+\item[] $E_d = \frac{e_{ah,d,Bohle}l_s^2}{8} = \frac{4.02*1.88^2}{8} = 1.78kNm$
+\end{itemize}
+\subsubsection*{Nachweis}
+\begin{itemize}
+\item[] $f_{m,d} = k_{mod} * f_{m,k} / \gamma_M = 0.65*2.4/1.3 = 1.2kN/cm^2$
+\item[] $W_{y,erf} = E_d/f_{m,d} = 178/1.2 = 148.33cm^3$
+\item[] $W_{y,vorh} = \frac{bh^2}{6} = \frac{12*10^2}{6} = 200cm^3$
+\item[] $W_{y,erf} = 148.33cm^3 < 200cm^3 = W_{y,vorh}\checkmark$
+\end{itemize}
 
 
 
