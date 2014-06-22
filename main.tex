@@ -612,9 +612,115 @@ Gewählte Bohlen:
 \item[] $W_{y,vorh} = \frac{bh^2}{6} = \frac{12*10^2}{6} = 200cm^3$
 \item[] $W_{y,erf} = 148.33cm^3 < 200cm^3 = W_{y,vorh}\checkmark$
 \end{itemize}
+\newpage
+\section{Aufgabe 3}
+\subsection*{Festlegung der eigenen Parameter aus Verteiler}
+Matrikelnummer 110113
+\begin{itemize}
+\item Länge a = 4.5m
+\item Länge b = 78m
+\item Bodenart SU
+\item $\varphi' = 32^\circ$
+\item $c' = 5$
+\item $\gamma = 19$
+\item $l_d = 0.6$
+\item $E_S = 60$
+\end{itemize}
+\subsection{Variantenuntersuchung zur Gründungsaufgabe}
+\subsubsection{Druckfundament}
+\subsubsection*{Einzelfundament}
+Einzelfundamente unter der Druckstütze. Zweckmäßig und wirtschaftlich bei kleinen Lasten
+\subsubsection*{Streifenfundament}
+Da in dieser Aufgabe recht hohe Lasten wirken werden, ist ein Streifenfundament besser geeignet. Dies wird durch die Nähe des Fugfundamentes verstärkt, da die beiden Fundamente sich nicht überschneiden können und deshalb in einer Richtung (um eine mittige Belastung des Fundamentes zu erhalten) die geometrischen Maße des Fundamentes sehr beschränkt sind.
+\subsubsection*{Gewählte Variante: Streifenfundament}
+\begin{figure}[h!]
+\includegraphics[scale=2]{Streifenfundament.png}
+\caption{Schnitt durch ein Streifenfundament \cite{streifenfundament}}
+\end{figure}
+Es wird ein Streifenfundament gewählt, da hier besonders die räumliche Enge in Verbund mit großen Lasten ein Einzelfundament unwirtschaftlich macht. Es wird bewehrt ausgeführt um Rissbildung zu reduzieren. 
+\subsubsection{Zugfundament}
+\subsubsection*{Pfahlgründung}
+Pfähle tragen Lasten über Mantelreibung und Spitzenwiderstand ab. Da bei einem Zugfundament kein Spitzenwiderstand wirkt, kann hier nur die Mantelreibung wirken. Unter Umständen werden deshalb sehr lange Pfähle benötigt, was in diesem Fall problematisch sein kann, da ab 5m Tiefe leicht betonagressives Grundwasser ansteht.
+\subsubsection*{Streifenfundament}
+Im Gegensatz zum Druckfundament wirkt das Streifenfundament bei Zugbelastung nur über Das Eigengewicht. Durch die Ausbildung als Streifenfundament können trotz geringer Tiefe und Breite durch die große Länge sehr schnell große Gewichte erzeugt werden.
+\subsubsection*{Gewählte Variante: Streifenfundament}
+Auch bei der Wahl für das Zugfundament spielten geometrische Faktoren eine Rolle. Da durch das agressive Grundwasser eine maximale Länge für Pfähle gesetzt ist, wird hier ein Streifenfundament gewählt. Außerdem hat dies technologische Vorteile, da beide Fundamente als Streifenfundament ausgeführt werden und so einige Arbeitsschritte kombiniert werden können.
+\subsection{Berechnung des Druckfundamentes}
+Berechnung nach \cite[S.107ff]{wsp}.
+\subsubsection{Eingangswerte}
+Das Fundament wird mittig mit einer vertikalen Last von 4300kN ständig und 550kN veränderlich pro Binder belastet. Der Binderabstand beträgt 9m. Für frostfreie Grüdung wird mindestens 1m tief gegründet.
+\subsubsection*{Berechnung der Windlast}
+Berechnung nach \cite[3.25]{schneider}.\\
+Annahme: Windzone 1, Gebäudehöhe $10m < h \le 18m$ $\rightarrow$ $q_P = 0.65kN/m^2$\\
+Der Wind wirkt pro Träger auf eine Fläche von 9mx13m (BinderabstandxHöhe).\\
+Horizontallast pro Stütze: $0.65*9*13 = 76.05kN$
 
 
-
+\subsubsection{Bestimmung der geometrischen Abmessungen}
+\subsubsection*{Abschätzung der Fundamentfläche}
+\begin{equation*}
+A \approx \frac{V}{\frac{\sigma_{R.d}}{1.4}-\sigma_g}
+\end{equation*}
+\begin{itemize}
+\item[] V = charakteristische äußere Last = 4850kN
+\item[] $\sigma_{g} \approx \sqrt{V}/3$ bewehrter Beton $= 23.21kN/m^2$
+\item[] \cite[S.111]{wsp}: Geschätzte Breite 2m, $\sigma_{R,d} = 430kN/m^2$, weder Abminderung noch Erhöhung, inkl. Begrenzung der Setzungen
+\item[] $A \approx \frac{4850}{\frac{430}{1.4}-23.21} = 17.08m^2$
+\end{itemize}
+\subsubsection*{Festlegung der Abmessungen}
+Erforderlich ist eine Fundamentfläche von $17m^2$ pro Binder. Bei einem Binderabstand von 9m werden 2m Fundamentbreite gewählt $(\widehat{=}18m^2) $
+\subsubsection{Berechnung der Schnittgrößen}
+\begin{itemize}
+\item[] $V_k = 4850kN$
+\item[] $G_k = 1m*2m*23*9mkN/m^3 = 414kN$
+\item[] $H_k = 76.05kN$
+\item[] $N_k = V_k + G_k = 5264kN$
+\item[] $M_k = H_k * h = 76.05*1m = 76.05kNm$
+\item[] $e = M_k/N_k = 76.05/5264 = 0.014m$
+\item[] $\tan\delta_E = H_k/V_k = 76.05/5264 = 0.014 < 0.2$ notwenig für vereinfachten Nachweis.
+\end{itemize}
+Um den vereinfachten Nachweis anwenden zu können müssen die zulässige Ausmitte und der Nachweis gegen Kippen eingehalten werden.
+\subsubsection{Nachweis Kippsicherheit GZ EQU}
+Nach \cite[S.97]{wsp}\\
+Da e sehr klein ist, wird direkt geprüft ist, ob die Ausmitte aus ständigen und veränderlichen Belastungen in der ersten Kernweite liegt. Damit wären beide Nachweise direkt erfüllt (größere Last oder kleinere zulässige Ausmitte).
+\begin{itemize}
+\item[] $e \le b/6 = 2m/6 = 0.33m$
+\item[] $e = 0.014m < 0.33m \checkmark$
+\end{itemize}
+\subsubsection{Vereinfachter Nachweis}
+Berechnung der reduzierten Fundamentfläche nach \cite[S.108]{wsp}.
+\begin{itemize}
+\item[] $b_L = b - e = 2m-0.014m = 1.986m$
+\item[] $\sigma_{E,d} \le \sigma_{R,d}$
+\item[] $\sigma_{E,d} = V_d/A' = (1.35V_g + 1.5V_p) / 18m^2 = (1.35*4300 + 1.5*550)/(9*1.986) = 370.93kN/m^2$
+\item[] $\sigma_{R,d} = 430kN/m^2$ (s.o.)
+\item[] $\sigma_{E,d} = 370.93kN/m^2 < 430kN/m^2 = \sigma_{R,d}\checkmark$
+\end{itemize}
+\subsection{Berechnung des Zugfundamentes}
+Bei der Berechnung des Zugfundamentes wird die Reibung vernachlässigt und die Last alleine über das Gewicht abgetragen. Für frostfreie Gründung wird mindestens 1m tief gegründet.
+\begin{itemize}
+\item[] Nachweis: $Z_d <  G_d$
+\item[] $Z_d = \gamma_G*Z_g + \gamma_Q*G_p = 1.35*1100 + 1.5*250 = 1860kN$
+\item[] $G_d = G_k/\gamma_R = G_k/1.4$
+\item[] erforderliches $G_k = 1860kN*1.4 = 2604kN$
+\item[] Wichte des Stahlbetons $\gamma = 23kN/m^3$
+\item[] Erforderliches Volumen: $V_min = 2604/23 = 113.23m^3$
+\item[] Wirkende Länge des Fundamentes: $9m$
+\item[] Nötige Querschnittsfläche: $A_{min} = 113.23/9 = 12.58m^2$
+\item[] Gewählte Fläche: Breite $3.5m$, Tiefe $4m$, Fläche $14m^2$
+\end{itemize}
+\subsubsection{Verformung am Zugfundament infolge der Bauabschnitte}
+Die Größte Verformung findet statt, wenn das Fundament schon gegossen wurde, aber die Halle noch nicht montiert ist. Zu berechnen sind also Setzungen aus Eigengewicht für das Zugfundament. Da keine horizontale Last angreift, sind nur mittlere Setzungen, also Setzungen aus zentrischer Last zu berechnen. Nach \cite[S.68]{wsp}.
+\begin{itemize}
+\item[] $s_m = \sigma_1bf/E_m$
+\item[] $\sigma_1 = \sigma_0 = V/(9*3.5) = 9*4*3.5*23/(9*3.5) = 92kN/m^2$
+\item[] $b = 3.5m$
+\item[] $E_m = E_S/\kappa = 50/(2/3) = 75000kN/m^2$, $\kappa = 2/3$ für Sand und Schluff
+\item[] $a/b = 9/4 = 2.25$
+\item[] $f = 1.244$
+\item[] $s_m = 92*3.5*1.244/75000 = 5.34mm$
+\end{itemize}
+Die Setzungen sind gering auch während des Bauzustandes \cite[S.37]{wsp} und beeinflussen deshalb nicht die Lösung.
 
 \newpage
 \section{Abbildungsverzeichnis}
@@ -630,6 +736,7 @@ http://www.thyssenkrupp-bautechnik.de/fileadmin/Leistungen/01 \_Spundwandprofile
 \bibitem[WSP]{wsp} Wissensspeicher Geotechnik - Delef Rütz, Karl Josef Witt - 18.Auflage - Weimar 2011
 \bibitem[Paul Debus]{me} Paul Debus - Powered by Faber Castell
 \bibitem[Schneider]{schneider} Schneider Bautabellen - 19. Auflage
+\bibitem[Harzer-Statik-Software]{streifenfundament} http://www.harzerstatik.de/images/Programme/Grundbau/Streifenfundament/Systemgrafik-1-Streifenfundament.png
 \end{thebibliography}
 
 \end{document}
